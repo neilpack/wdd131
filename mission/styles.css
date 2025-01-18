@@ -7,6 +7,15 @@ body {
     padding: 0;
 }
 
+/* Optional Dark Mode */
+.dark {
+    background-color: #333; /* #333 */
+    color: white;
+}
+.dark header.title h2 {
+    color: rgb(160, 212, 237); /* Here are some colors I could use (71c7ff) rgb(160, 212, 237) */
+}
+
 /* Content Div */
 #content {
     max-width: 600px;
