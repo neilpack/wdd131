@@ -1,16 +1,13 @@
-// DYNAMIC MENU JAVASCRIPT
-const menuButton = document.querySelector(".menu"); 
-const menuLinks = document.querySelector(".menu-links");
-
-function toggleMenu() {
+// HANDLE RESIZE (Dynamic Menu)
+function handleResize() {
+    const menuLinks = document.querySelector(".menu-links");
     menuLinks.classList.toggle("hide");
 }
-
+const menuButton = document.querySelector(".menu"); 
 menuButton.addEventListener("click", (event) => {
     event.preventDefault();
-    toggleMenu();
+    handleResize();
 });
-
 
 // VIEW TEMPLATE JAVASCRIPT
 function viewerTemplate(pic, alt) {
@@ -24,10 +21,8 @@ function viewHandler(event) {
     const clickedImage = event.target;
     if (clickedImage.tagName !== 'IMG') return;
 
-    // Get the src attribute from the clicked image and split it to get the base name
+    // Get the src attribute from the clicked image
     const srcPath = clickedImage.src.split("-sm.jpeg")[0];
-
-    // Construct the full-size image file name
     const fullImage = srcPath + "-full.jpeg";
 
     // Create the modal HTML by passing the full-size image path and alt text
@@ -40,7 +35,6 @@ function viewHandler(event) {
     const closeButton = document.querySelector(".close-viewer");
     closeButton.addEventListener("click", closeViewer);
 }
-
 document.querySelector(".gallery").addEventListener("click", viewHandler);
 
 function closeViewer() {
