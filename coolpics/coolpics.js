@@ -1,12 +1,24 @@
-// HANDLE RESIZE (Dynamic Menu)
+// HANDLE RESIZE
 function handleResize() {
+    const menuLinks = document.querySelector(".menu-links");
+    if (window.innerWidth > 1000) {
+      menuLinks.classList.remove("hide");
+    } else {
+      menuLinks.classList.add("hide");
+    }
+  }
+  handleResize();
+  window.addEventListener("resize", handleResize);
+
+// (Dynamic Menu)
+function dynamicMenu() {
     const menuLinks = document.querySelector(".menu-links");
     menuLinks.classList.toggle("hide");
 }
 const menuButton = document.querySelector(".menu"); 
 menuButton.addEventListener("click", (event) => {
     event.preventDefault();
-    handleResize();
+    dynamicMenu();
 });
 
 // VIEW TEMPLATE JAVASCRIPT
