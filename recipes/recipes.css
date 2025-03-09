@@ -53,8 +53,8 @@ header form input {
     border-radius: 2px;
     width: 90%;                /* Make the form take up most of the screen width */
     max-width: 1200px;         /* Set a maximum width to prevent it from being too wide */
-    padding: 15px;             /* Add padding to make it larger */
-    border-radius: 15px;       /* Rounded edges */
+    padding: 15px;
+    border-radius: 15px;
     margin-left: 20px;
 }
 header #search-icon {
@@ -68,6 +68,40 @@ header button {
 header button:hover {
     background-color: rgb(184, 184, 184);
 }
+
+/* Recipes */
+#recipe-container {
+    padding: 15px;
+}
+.recipe {
+    padding: 25px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    margin-right: 75px;
+    margin-left: 75px;
+}
+.recipe img {
+    border-radius: 3px;
+    border: 2px solid #333;
+    height: auto;
+    width: 250px;
+}
+#recipe-info {
+    padding-left: 40px;
+}
+ul {
+    list-style-type: none; /* Removes the default bullet points */
+    padding: 0;
+}
+li {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 3px 0;
+    display: inline-block;
+}
+
 
 /* Footer */
 footer {
@@ -89,4 +123,33 @@ footer #license {
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 600px) {
+    .recipe {
+        flex-direction: column;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    .recipe img {
+        align-self: center;
+    }
+    #recipe-description {
+        display: none;
+    }
+    #recipe-info {
+        padding-left: 0px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    #recipe-info {
+        padding-left: 40px;
+    }
+    .recipe {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
 }

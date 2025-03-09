@@ -5,28 +5,18 @@ function renderRecipe(recipe) {
     // Create HTML structure
     const recipeHTML = `
         <div class="recipe">
-            <h1>${recipe.name}</h1>
             <img src="${recipe.image}" alt="${recipe.name}" width="200px" height="auto">
-            <p><strong>Author:</strong> ${recipe.author}</p>
-            <p><strong>Published:</strong> ${recipe.datePublished}</p>
-            <p><strong>Cook Time:</strong> ${recipe.cookTime}</p>
-            <p><strong>Prep Time:</strong> ${recipe.prepTime}</p>
-            <p><strong>Description:</strong> ${recipe.description}</p>
+            <div id="recipe-info">
+                <h1>${recipe.name}</h1>
+                <span class="rating" role="img" aria-label="Rating: ${recipe.rating} out of 5 stars">
+                    ${generateStars(recipe.rating)}
+                </span>
+                <p id="recipe-description"><strong>Description:</strong> ${recipe.description}</p>
+                <ul>
+                    ${recipe.tags.map(tag => `<li>${tag}</li>`).join('')}
+                </ul>
+            </div>
             
-            <h2>Ingredients:</h2>
-            <ul>
-                ${recipe.recipeIngredient.map(ingredient => `<li>${ingredient}</li>`).join('')}
-            </ul>
-            
-            <h2>Instructions:</h2>
-            <ol>
-                ${recipe.recipeInstructions.map(instruction => `<li>${instruction}</li>`).join('')}
-            </ol>
-            
-            <h2>Rating:</h2>
-            <span class="rating" role="img" aria-label="Rating: ${recipe.rating} out of 5 stars">
-                ${generateStars(recipe.rating)}
-            </span>
         </div>
     `;
     
