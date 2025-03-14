@@ -21,11 +21,12 @@
             <img src="images/recipe-book.png" alt="Recipe Book Main Icon">
             <h1>RecipeBook</h1>
         </div>
-        <form action="/search" method="GET">
-            <input type="text" id="query" name="query" placeholder="Find a recipe" required>
-            
-            <button type="submit"><img src="images/search.svg" alt="search icon" id="search-icon"></button>
-        </form>
+        <div class="sbar-container">
+            <input type="text" id="search-input" name="query" placeholder="Find a recipe" required>
+            <button type="button" id="search-button">
+                <img src="images/search.svg" alt="search icon" id="search-icon">
+            </button>
+        </div>
 
 
     </Header>

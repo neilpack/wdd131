@@ -44,12 +44,12 @@ header div img {
 header div h1 {
     font-size: 60px;
 }
-header form {
+header .sbar-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-header form input {
+header .sbar-container input {
     border-radius: 2px;
     width: 90%;                /* Make the form take up most of the screen width */
     max-width: 1200px;         /* Set a maximum width to prevent it from being too wide */
