@@ -1,0 +1,12 @@
+/* ROOT */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Faustina:ital,wght@0,300..800;1,300..800&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/*Title: DM Serif Text */
+/* Subtext: Tinos */
+/* Body: Faustina */
+:root {
+    --accent-color1: #134074;
+    --accent-color2: #13315C;
+    --primary-color: #0B2545;
+    --secondary-color: #8DA9C4;
+    --white-color: #EEF4ED;
+  }
