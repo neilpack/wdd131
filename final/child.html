@@ -12,8 +12,8 @@
     <meta property="og:url" content="URL of the page">
     <meta name="twitter:card" content="summary_large_image">
     <title>Neil Pack WDD 131 Portfolio</title>
-    <link href="style.css" rel="stylesheet"> 
-    <script src="script.js" defer></script>
+    <link href="child-style.css" rel="stylesheet"> 
+    <script src="child-script.js" defer></script>
 </head>
 <body>
     <!-- NAV BAR -->
@@ -31,6 +31,21 @@
           </nav>
     </header>
     <main>
+
+    <!-- Title -->
+    <h2 class="portfolio-title">Portfolio</h2>
+
+    <!--Search Bar-->
+        <div class="sbar-container">
+            <input type="text" id="search-input" name="query" placeholder="Find a photo" required>
+            <button type="button" id="search-button">
+                <img src="images/search.png" alt="search icon" id="search-icon">
+            </button>
+        </div>
+
+        <!-- Photo Array -->
+         <section id="photo-container">
+         </section>
         
     </main>
     <!-- FOOTER -->
