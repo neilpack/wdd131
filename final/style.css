@@ -10,3 +10,167 @@
     --secondary-color: #8DA9C4;
     --white-color: #EEF4ED;
   }
+
+  /* GLOBAL */
+* {
+  margin: 0;
+}  
+h1 {
+  font-family: "DM Serif Text";
+}
+h2 {
+  font-family: "Tinos";
+}
+p {
+  font-family: "Faustina";
+}
+
+/* HEADER */
+header {
+  background-color: var(--accent-color1);
+  display: flex;
+  justify-content: space-between; /* Pushes items to opposite sides */
+  align-items: center;
+}
+#title-card {
+  padding: 20px;
+  text-align: left;
+  display: flex;
+}
+header h1 {
+  padding-left: 30px;
+  font-size: 45px;
+  color: white;
+}
+header p {
+  font-size: 45px;
+  padding-left: 15px;
+  color: white;
+}
+nav ul {
+  display: flex; /* Makes nav items align horizontally */
+  list-style: none;
+  padding: 20px;
+}
+nav ul li a {
+  font-family: "Tinos";
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+  font-size: 30px;
+}
+nav ul li a:hover {
+  filter: brightness(60%);
+  transition: 0.3s ease-in-out;
+}
+
+/* HOME GRID */
+section {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  position: relative; /* Allows overlapping */
+  padding: 50px;
+  width: 1400px;
+  height: auto;
+  margin: 0 20px 0 20px; /*top right bottom left*/
+}
+section.left img {
+  width: 100%;
+  height: auto;
+  grid-column: 1 / 2; /* Image in the first column */
+  border-radius: 25px;
+}
+section.left h2 {
+  padding: 10px;
+  background-color: #134074;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  font-size: 70px;
+  grid-column: 2 / 3; /* h2 in the second column */
+  align-self: center; /* Vertically center */
+  position: relative; /* Allows fine-tuned positioning */
+  left: -5%; /* Adjust for the overlap */
+  z-index: 2; /* Ensure it appears above the image */
+}
+section.right img {
+  width: 100%;
+  height: auto;
+  grid-column: 2 / 3; /* Image in the first column */
+  border-radius: 25px;
+}
+section.right h2 {
+  padding: 10px;
+  background-color: #134074;
+  border-radius: 10px;
+  text-align: center;
+  grid-row: 1;
+  color: white;
+  align-self: center; /* Vertically center */
+  font-size: 70px;
+  grid-column: 1 / 2; /* h2 in the second column */
+  position: relative; /* Allows fine-tuned positioning */
+  right: -5%; /* Adjust for the overlap */
+  z-index: 2; /* Ensure it appears above the image */
+}
+.home-image-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+/* ABOUT ME */
+#aboutme h2 {
+  padding: 10px;
+  background-color: #134074;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  font-size: 70px;
+  width: 700px;
+  margin: 0 auto;
+}
+#aboutme img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+#aboutme p {
+  padding: 10px;
+  background-color: #134074;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  width: 700px;
+  margin: 0 auto;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--accent-color1);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 120px;
+}
+.social-links {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.social-links a {
+  margin-right: 50px;
+  text-decoration: none;
+}
+.social-links img:hover {
+  filter: brightness(80%);
+  transition: 0.3s ease-in-out;
+}
+footer p {
+  padding: 5px;
+  text-align: left;
+  color: white;
+  border-radius: 5px;
+  margin-left: 15px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
