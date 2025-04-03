@@ -1,22 +1,22 @@
+// Display the array of photos ================================================================================================
 const photos = [
-    { filename: "images/concert1.JPG", title: "In The Moment", description: "A vibrant live concert scene with colorful stage lights.", tags: ["music", "concert", "live"] },
-    { filename: "images/concert2.JPG", title: "Behind The Concert", description: "A rock band performing in front of an energetic crowd.", tags: ["music", "rock", "performance", "live"] },
-    { filename: "images/concert3.JPG", title: "Taco Bell Concert", description: "A festival stage lit up with an exciting atmosphere.", tags: ["concert", "music", "night", "live"] },
-    { filename: "images/roommate1.JPG", title: "Roommate Fun", description: "Two roommates laughing together during a shoot.", tags: ["roommates", "friendship", "fun"] },
-    { filename: "images/roommate2.JPG", title: "Friends", description: "Roommates lined up together.", tags: ["fun", "winter", "roommates"] },
-    { filename: "images/roommate3.jpg", title: "Pumpkin Carving", description: "Roommates relaxing and having halloween fun.", tags: ["halloween", "pumpkin", "friends", "roommates", "fall"] },
-    { filename: "images/couple1.jpeg", title: "River Path", description: "My girlfriend and I taking photos together.", tags: ["love", "couple", "romance"] },
-    { filename: "images/potrait1.jpeg", title: "Epic Moment", description: "A portrait on a river with dramatic lighting.", tags: ["portrait", "fun", "river", "fall"] },
-    { filename: "images/hero0.JPG", title: "Standing Together", description: "Roommates standing around with a scenic backdrop.", tags: ["fun", "cinematic", "pose"] },
-    { filename: "images/hero1.JPG", title: "My Favorite Missionary", description: "Missionary photo taken before serving a mission outside of an LDS temple.", tags: ["temple", "service", "mission", "sister"] },
-    { filename: "images/hero2.JPG", title: "Senior Photo", description: "Someone standing on a bridge with a colorful background.", tags: ["senior", "nature", "colorful"] }
+    { filename: "images/concert1.webp", title: "In The Moment", description: "A vibrant live concert scene with colorful stage lights.", tags: ["music", "concert", "live"] },
+    { filename: "images/concert2.webp", title: "Behind The Concert", description: "A rock band performing in front of an energetic crowd.", tags: ["music", "rock", "performance", "live"] },
+    { filename: "images/concert3.webp", title: "Taco Bell Concert", description: "A festival stage lit up with an exciting atmosphere.", tags: ["concert", "music", "night", "live"] },
+    { filename: "images/roommate1.webp", title: "Roommate Fun", description: "Two roommates laughing together during a shoot.", tags: ["roommates", "friendship", "fun"] },
+    { filename: "images/roommate2.webp", title: "Friends", description: "Roommates lined up together.", tags: ["fun", "winter", "roommates"] },
+    { filename: "images/roommate3.webp", title: "Pumpkin Carving", description: "Roommates relaxing and having halloween fun.", tags: ["halloween", "pumpkin", "friends", "roommates", "fall"] },
+    { filename: "images/couple1.webp", title: "River Path", description: "My girlfriend and I taking photos together.", tags: ["love", "couple", "romance"] },
+    { filename: "images/potrait1.webp", title: "Epic Moment", description: "A portrait on a river with dramatic lighting.", tags: ["portrait", "fun", "river", "fall"] },
+    { filename: "images/hero0.webp", title: "Standing Together", description: "Roommates standing around with a scenic backdrop.", tags: ["fun", "cinematic", "pose"] },
+    { filename: "images/hero1.webp", title: "My Favorite Missionary", description: "Missionary photo taken before serving a mission outside of an LDS temple.", tags: ["temple", "service", "mission", "sister"] },
+    { filename: "images/hero2.webp", title: "Senior Photo", description: "Someone standing on a bridge with a colorful background.", tags: ["senior", "nature", "colorful"] }
   ];
-
 //Create HTML
 function photoTemplate(photo) {
     return `
         <div class="photo">
-            <img src="${photo.filename}" alt="${photo.title}" width="300px" height="auto" loading="lazy">
+            <img src="${photo.filename}" alt="${photo.title}" width="300px" height="auto">
             <div class="photo-info">
                 <h1>${photo.title}</h1>
                 <p><strong>Description:</strong> ${photo.description}</p>
@@ -31,7 +31,6 @@ function photoTemplate(photo) {
 function tagsTemplate(tags) {
     return tags.map(tag => `<li class="tag">${tag}</li>`).join('');
 }
-
 //Search handler function
 function searchHandler(e) {
     e.preventDefault();
@@ -49,18 +48,16 @@ function filterPhotos(query) {
 
     return filtered;
 }
-// Attach the search handler to the search button
+
 document.getElementById('search-button').addEventListener('click', searchHandler);
 
 function renderPhotos(photosArray = photos) {
     const photoContainer = document.getElementById('photo-container');
     photoContainer.innerHTML = photosArray.map(photoTemplate).join('');
 }
-
-// Initial render of all photos
 renderPhotos();
 
-// Modal Viewer
+// Modal Viewer =================================================================================================
 function viewerTemplate(pic, alt) {
     return `<div class="viewer">
               <button class="close-viewer">X</button>
