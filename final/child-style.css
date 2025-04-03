@@ -25,7 +25,7 @@ p {
   font-family: "Faustina";
 }
 
-/* HEADER */
+/* --=== HEADER ============================================================================================= */
 header {
   background-color: var(--accent-color1);
   display: flex;
@@ -64,7 +64,7 @@ nav ul li a:hover {
   transition: 0.3s ease-in-out;
 }
 
-/* TITLE */
+/* --=== TITLE ============================================================================================= */
 .portfolio-title {
     padding: 10px;
     background-color: var(--accent-color1);
@@ -76,7 +76,7 @@ nav ul li a:hover {
     margin: 30px auto;
 }
 
-/* SEARCH BAR */
+/* --=== SEARCH BAR ============================================================================================= */
 .sbar-container {
     width: 100%;
     display: flex;
@@ -106,7 +106,7 @@ nav ul li a:hover {
     width: 25px;
 }
  
-/* PHOTOS */
+/* --=== PHOTOS ============================================================================================= */
 main {
     background-color: white;
 }
@@ -142,7 +142,7 @@ main {
     display: inline-block;
 }
 
-/* FOOTER */
+/* --=== FOOTER ============================================================================================= */
 footer {
     background-color: var(--accent-color1);
     display: flex;
@@ -172,7 +172,7 @@ footer p {
     margin-bottom: 5px;
 }
 
-/* Modal Viewer */
+/* --=== MODAL VIEWER ============================================================================================= */
 .viewer {
     position: fixed;
     top: 0;
@@ -208,7 +208,7 @@ footer p {
     color: red;
 }
 
-/* Mobile Styles */
+/* --=== MOBILE STYLES ============================================================================================= */
 @media (max-width: 1200px) {
   /* HEADER */
   header {
@@ -220,6 +220,10 @@ footer p {
   #title-card {
     padding: 10px;
     justify-content: center;
+  }
+
+  #title-card p {
+    padding-left: 8px;
   }
 
   header h1 {

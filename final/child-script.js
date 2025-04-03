@@ -4,9 +4,9 @@ const photos = [
     { filename: "images/concert3.JPG", title: "Taco Bell Concert", description: "A festival stage lit up with an exciting atmosphere.", tags: ["concert", "music", "night", "live"] },
     { filename: "images/roommate1.JPG", title: "Roommate Fun", description: "Two roommates laughing together during a shoot.", tags: ["roommates", "friendship", "fun"] },
     { filename: "images/roommate2.JPG", title: "Friends", description: "Roommates lined up together.", tags: ["fun", "winter", "roommates"] },
-    { filename: "images/roommate3.jpg", title: "Pumpkin Carving", description: "Roommates relaxing and having halloween fun.", tags: ["halloween", "pumpkin", "friends", "roommates"] },
-    { filename: "images/couple1.jpeg", title: "Romantic Moment", description: "A couple enjoying their time together.", tags: ["love", "couple", "romance"] },
-    { filename: "images/potrait1.jpeg", title: "Epic Moment", description: "A portrait on a river with dramatic lighting.", tags: ["portrait", "fun", "river"] },
+    { filename: "images/roommate3.jpg", title: "Pumpkin Carving", description: "Roommates relaxing and having halloween fun.", tags: ["halloween", "pumpkin", "friends", "roommates", "fall"] },
+    { filename: "images/couple1.jpeg", title: "River Path", description: "My girlfriend and I taking photos together.", tags: ["love", "couple", "romance"] },
+    { filename: "images/potrait1.jpeg", title: "Epic Moment", description: "A portrait on a river with dramatic lighting.", tags: ["portrait", "fun", "river", "fall"] },
     { filename: "images/hero0.JPG", title: "Standing Together", description: "Roommates standing around with a scenic backdrop.", tags: ["fun", "cinematic", "pose"] },
     { filename: "images/hero1.JPG", title: "My Favorite Missionary", description: "Missionary photo taken before serving a mission outside of an LDS temple.", tags: ["temple", "service", "mission", "sister"] },
     { filename: "images/hero2.JPG", title: "Senior Photo", description: "Someone standing on a bridge with a colorful background.", tags: ["senior", "nature", "colorful"] }
